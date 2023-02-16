@@ -16,7 +16,7 @@ const Stories = () => {
     console.log(userStories);
   }, []);
   return (
-    <div>
+    <div className="flex space-x-2 p-6 bg-white mt-8 border-gray-200 border overflow-x-scroll rounded-sm scrollbar-none">
       {userStories?.map((user) => (
         <Story key={user.id} name={user.username} img={user.image} />
       ))}
