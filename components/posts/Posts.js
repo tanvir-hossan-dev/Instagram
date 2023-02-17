@@ -1,6 +1,6 @@
 import React from "react";
 import Post from "./Post";
-import userImg from "/public/tanvir 2.png";
+import userImg from "../../public/tanvir 2.png";
 
 const Posts = () => {
   const posts = [
