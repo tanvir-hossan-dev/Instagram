@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import { BsThreeDots } from "react-icons/bs";
+import { BsThreeDots, BsChatDots } from "react-icons/bs";
+import { BiBookmark } from "react-icons/bi";
+import { AiOutlineHeart } from "react-icons/ai";
 const Post = ({ post }) => {
   const { name, userImg, img, caption } = post;
   return (
@@ -18,7 +20,16 @@ const Post = ({ post }) => {
 
         <BsThreeDots className="h-5" />
       </div>
+      {/* Post Image */}
       <img src={img} className="object-cover w-full" alt={name} />
+      {/* Post button */}
+      <div className="flex justify-between p-4">
+        <div className="flex space-x-4">
+          <AiOutlineHeart className="btn" />
+          <BsChatDots className="btn" />
+        </div>
+        <BiBookmark className="btn" />
+      </div>
     </div>
   );
 };
