@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { BsThreeDots, BsChatDots } from "react-icons/bs";
+import { BsThreeDots, BsChatDots, BsFillEmojiSmileFill } from "react-icons/bs";
 import { BiBookmark } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 const Post = ({ post }) => {
@@ -30,6 +30,17 @@ const Post = ({ post }) => {
         </div>
         <BiBookmark className="btn" />
       </div>
+      {/* Post Comment  */}
+      <p className="p-5 truncate">
+        <span className="font-bold mr-2">{name}</span>
+        {caption}
+      </p>
+      {/* Post Action  */}
+      <form action="" className="flex items-center space-x-4 p-4">
+        <BsFillEmojiSmileFill className="h-7" />
+        <input type="text" className="border-none flex-1 focus:ring-0" placeholder="Enter your comment..." />
+        <button className="text-blue-400 font-bold">Post</button>
+      </form>
     </div>
   );
 };
