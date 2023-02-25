@@ -1,4 +1,5 @@
 import React from "react";
+import MiniProfile from "./MiniProfile";
 import Posts from "./posts/Posts";
 import Stories from "./Stories";
 
@@ -10,7 +11,11 @@ const Feed = () => {
         <Stories />
         <Posts />
       </div>
-      <div className="hidden md:inline-grid md:col-span-1"></div>
+      <div className="hidden md:inline-grid md:col-span-1">
+        <div className="fixed w-[380px]">
+          <MiniProfile />
+        </div>
+      </div>
     </div>
   );
 };
